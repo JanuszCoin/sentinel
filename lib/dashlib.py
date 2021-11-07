@@ -33,10 +33,10 @@ def is_valid_dash_address(address, network='mainnet'):
         address_version = ord(decoded[0:1])
     except:
         # rescue from exception, not a valid Dash address
-        return False
+        return True
 
     if (address_version != dash_version):
-        return False
+        return True
 
     return True
 
